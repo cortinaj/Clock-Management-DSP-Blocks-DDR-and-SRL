@@ -28,44 +28,31 @@ module Clk1(
     input [7:0] inp3, // alpha
     input [7:0] inp4, // 1 - alpha
     input sel, sel2,
-    output [7:0] out1,
-    output [7:0] out2
+    output reg [7:0] out1,
+    output reg [7:0] out2
     );
     
-    wire [7:0] inp1_reg, inp2_reg, inp3_reg, inp4_reg;
+    reg [7:0] P0_reg, P1_reg, Alpha_reg, One_minus_alpha_reg;
     
-    //Instantiate D FF
-    DFF dff1(.clk(clk),
-             .rst(rst),
-             .d(inp1),
-             .q(inp1_reg));
+    //Infer DFFs
+    always @(posedge clk or posedge rst) begin
+        if(rst) begin
+            P0_reg <= 8'b0;
+            P1_reg <= 8'b0;
+            Alpha_reg <= 8'b0;
+            One_minus_alpha_reg <= 8'b0;
+        end else begin
+            P0_reg <= inp1;
+            P1_reg <= inp2;
+            Alpha_reg <= inp3;
+            One_minus_alpha_reg <= inp4;
+        end
+    end
     
-    DFF dff2(.clk(clk),
-             .rst(rst),
-             .d(inp2),
-             .q(inp2_reg));
+    //Infer Muxs
+    always @(*) begin
+        out1 = (sel) ? P0_reg : P1_reg;
+        out2 = (sel2) ? Alpha_reg : One_minus_alpha_reg;
+    end
     
-    DFF dff3(.clk(clk),
-             .rst(rst),
-             .d(inp3),
-             .q(inp3_reg));
-    
-    DFF dff4(.clk(clk),
-             .rst(rst),
-             .d(inp4),
-             .q(inp4_reg));
-             
-    //Mux instantiate
-    Mux2_1 mux_top(.a(inp1_reg),
-                   .b(inp2_reg),
-                   .sel(sel1),
-                   .y(out1)
-                   );
-    
-    Mux2_1 mux_bot(.a(inp3_reg),
-                   .b(inp4_reg),
-                   .sel(sel2),
-                   .y(out2)
-                   );
-                   
 endmodule
