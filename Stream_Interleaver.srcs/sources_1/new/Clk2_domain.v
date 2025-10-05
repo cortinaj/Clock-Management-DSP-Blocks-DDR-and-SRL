@@ -28,17 +28,19 @@ module Clk2_domain(
     output [7:0] Stream_output
     );
     
-    wire [7:0] P_reg, alpha_reg, blender_reg;
+    reg [7:0] P_sync, Alpha_sync, Blended_reg;
     
-    DFF P_dff(.clk(clk),
-             .rst(rst),
-             .d(P_input),
-             .q(P_reg)
-             );
-             
-    DFF A_dff(.clk(clk),
-              .rst(rst),
-              .d(Alpha_input),
-              .q(alpha_reg)
-              );
+    always @(posedge clk or posedge rst) begin
+        if(rst) begin
+            P_sync <= 8'b0;
+            Alpha_sync <= 8'b0;
+        end else begin
+            P_sync <= P_input;
+            Alpha_sync <= Alpha_input;
+        end
+    end
+    
+    
+    
+
 endmodule
