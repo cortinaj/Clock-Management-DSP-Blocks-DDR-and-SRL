@@ -1,7 +1,7 @@
-Running: xsim.dir/blender_tb_behav/xsimk.exe -simmode gui -wdb blender_tb_behav.wdb -simrunnum 0 -socket 57735
+Running: xsim.dir/blender_tb_behav/xsimk.exe -simmode gui -wdb blender_tb_behav.wdb -simrunnum 0 -socket 57790
 Design successfully loaded
-Design Loading Memory Usage: 9952 KB (Peak: 9952 KB)
-Design Loading CPU Usage: 15 ms
+Design Loading Memory Usage: 10016 KB (Peak: 10016 KB)
+Design Loading CPU Usage: 0 ms
 Simulation completed
-Simulation Memory Usage: 10604 KB (Peak: 10604 KB)
-Simulation CPU Usage: 15 ms
+Simulation Memory Usage: 10636 KB (Peak: 10636 KB)
+Simulation CPU Usage: 0 ms
