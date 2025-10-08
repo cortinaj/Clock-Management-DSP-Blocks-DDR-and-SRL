@@ -23,6 +23,7 @@
 module Clk1(
     input clk,
     input rst,
+    input locked,
     input [7:0] inp1, //P0
     input [7:0] inp2, //P1
     input [7:0] inp3, // alpha
@@ -41,7 +42,7 @@ module Clk1(
             P1_reg <= 8'b0;
             Alpha_reg <= 8'b0;
             One_minus_alpha_reg <= 8'b0;
-        end else begin
+        end else if(locked) begin
             P0_reg <= inp1;
             P1_reg <= inp2;
             Alpha_reg <= inp3;

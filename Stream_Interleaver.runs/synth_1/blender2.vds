@@ -1,16 +1,16 @@
-
-*** Running vivado
-    with args -log blender2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source blender2.tcl
-
-
-
-****** Vivado v2023.2 (64-bit)
-  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
-  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
-  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Oct  7 23:41:37 2025
+# Process ID: 20996
+# Current directory: C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.runs/synth_1
+# Command line: vivado.exe -log blender2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blender2.tcl
+# Log file: C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.runs/synth_1/blender2.vds
+# Journal file: C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.runs/synth_1\vivado.jou
+# Running On: DESKTOP-6LGOCJL, OS: Windows, CPU Frequency: 3187 MHz, CPU Physical cores: 24, Host memory: 68469 MB
+#-----------------------------------------------------------
 source blender2.tcl -notrace
 Command: read_checkpoint -auto_incremental -incremental C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/utils_1/imports/synth_1/blender.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/utils_1/imports/synth_1/blender.dcp for incremental synthesis
@@ -61,7 +61,6 @@ Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-The system cannot find the path specified.
 Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1663.480 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
@@ -258,7 +257,6 @@ Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-The system cannot find the path specified.
 Synth Design complete | Checksum: 4ad32b28
 INFO: [Common 17-83] Releasing license: Synthesis
 28 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
