@@ -1,0 +1,1 @@
+--incr --debug typical --relax --mt 2  -L xbip_utils_v3_0_11 -L c_reg_fd_v12_0_7 -L c_mux_bit_v12_0_7 -L c_shift_ram_v12_0_15 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot c_shift_ram_0 xil_defaultlib.c_shift_ram_0 xil_defaultlib.glbl -log elaborate.log

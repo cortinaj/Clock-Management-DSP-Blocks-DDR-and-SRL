@@ -10,3 +10,5 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JP/Documents/School/ECE524
 INFO: [VRFC 10-311] analyzing module blender2
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sim_1/new/blender2_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module blender2_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
