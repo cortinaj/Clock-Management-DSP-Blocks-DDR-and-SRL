@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log blender2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source blender2.tcl
+EAStep vivado -log blender3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source blender3.tcl

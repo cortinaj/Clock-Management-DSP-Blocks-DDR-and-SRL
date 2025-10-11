@@ -55,7 +55,6 @@ COMPONENT c_shift_ram_0
   PORT (
     D : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     CLK : IN STD_LOGIC;
-    CE : IN STD_LOGIC;
     Q : OUT STD_LOGIC_VECTOR(7 DOWNTO 0) 
   );
 END COMPONENT;
@@ -69,7 +68,6 @@ your_instance_name : c_shift_ram_0
   PORT MAP (
     D => D,
     CLK => CLK,
-    CE => CE,
     Q => Q
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------

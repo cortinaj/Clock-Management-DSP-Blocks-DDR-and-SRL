@@ -11,7 +11,7 @@
         "ShiftRegType": [ { "value": "Fixed_Length", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "OptGoal": [ { "value": "Resources", "resolve_type": "user", "usage": "all" } ],
         "RegLastBit": [ { "value": "true", "resolve_type": "user", "format": "bool", "enabled": false, "usage": "all" } ],
-        "CE": [ { "value": "true", "value_src": "user", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "CE": [ { "value": "false", "value_src": "user", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "Width": [ { "value": "8", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Depth": [ { "value": "64", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "DefaultDataRadix": [ { "value": "2", "resolve_type": "user", "usage": "all" } ],
@@ -40,7 +40,7 @@
         "C_SINIT_VAL": [ { "value": "00000000", "resolve_type": "generated", "usage": "all" } ],
         "C_DEFAULT_DATA": [ { "value": "00000000", "resolve_type": "generated", "usage": "all" } ],
         "C_HAS_A": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_HAS_CE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_HAS_CE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_REG_LAST_BIT": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_SYNC_PRIORITY": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_SYNC_ENABLE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -80,7 +80,6 @@
       "ports": {
         "D": [ { "direction": "in", "size_left": "7", "size_right": "0", "driver_value": "0" } ],
         "CLK": [ { "direction": "in", "driver_value": "0x0" } ],
-        "CE": [ { "direction": "in", "driver_value": "0x1" } ],
         "Q": [ { "direction": "out", "size_left": "7", "size_right": "0", "driver_value": "0" } ]
       },
       "interfaces": {
@@ -126,9 +125,6 @@
           "mode": "slave",
           "parameters": {
             "POLARITY": [ { "value": "ACTIVE_HIGH", "value_src": "constant", "usage": "all" } ]
-          },
-          "port_maps": {
-            "CE": [ { "physical_name": "CE" } ]
           }
         },
         "d_intf": {

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Fri Oct 10 21:24:09 2025
+| Date         : Fri Oct 10 22:48:21 2025
 | Host         : DESKTOP-6LGOCJL running 64-bit major release  (build 9200)
 | Command      : report_utilization -file blender2_utilization_synth.rpt -pb blender2_utilization_synth.pb
 | Design       : blender2

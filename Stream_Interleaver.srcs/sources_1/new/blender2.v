@@ -29,7 +29,9 @@ module blender2(
     );
 
 
+
     wire clk_out1, clk_out2;
+    wire P0_delay;
     wire [7:0] P_value, A_value;
     wire [15:0] Add_result;
 
@@ -40,6 +42,7 @@ module blender2(
         .clk_in1(clk)
     );
     
+
     domain1 dut (.clk(clk_out1),
                  .rst(rst),
                  .sel(sel),

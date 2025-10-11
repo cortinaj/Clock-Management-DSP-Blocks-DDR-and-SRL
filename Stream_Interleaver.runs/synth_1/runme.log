@@ -12,7 +12,6 @@
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source blender2.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 583.551 ; gain = 182.000
 Command: read_checkpoint -auto_incremental -incremental C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/utils_1/imports/synth_1/blender.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/utils_1/imports/synth_1/blender.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -25,31 +24,31 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 30636
+INFO: [Synth 8-7075] Helper process launched with PID 17760
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1461.066 ; gain = 439.980
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1460.270 ; gain = 440.465
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'blender2' [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sources_1/new/blender2.v:23]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.runs/synth_1/.Xil/Vivado-41676-DESKTOP-6LGOCJL/realtime/clk_wiz_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.runs/synth_1/.Xil/Vivado-41676-DESKTOP-6LGOCJL/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.runs/synth_1/.Xil/Vivado-22924-DESKTOP-6LGOCJL/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.runs/synth_1/.Xil/Vivado-22924-DESKTOP-6LGOCJL/realtime/clk_wiz_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'domain1' [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sources_1/new/domain1.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'domain1' (0#1) [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sources_1/new/domain1.v:23]
 INFO: [Synth 8-6157] synthesizing module 'domain2' [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sources_1/new/domain2.v:22]
 INFO: [Synth 8-6155] done synthesizing module 'domain2' (0#1) [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sources_1/new/domain2.v:22]
 INFO: [Synth 8-6155] done synthesizing module 'blender2' (0#1) [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sources_1/new/blender2.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1569.762 ; gain = 548.676
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1567.754 ; gain = 547.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1569.762 ; gain = 548.676
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1567.754 ; gain = 547.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1569.762 ; gain = 548.676
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1567.754 ; gain = 547.949
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1569.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1567.754 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -58,23 +57,23 @@ Parsing XDC File [c:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-M
 Finished Parsing XDC File [c:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_gen'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1665.246 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1604.566 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 The system cannot find the path specified.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1665.246 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1604.566 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1665.246 ; gain = 644.160
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1604.566 ; gain = 584.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1665.246 ; gain = 644.160
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1604.566 ; gain = 584.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -83,10 +82,10 @@ Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/J
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
 Applied set_property KEEP_HIERARCHY = SOFT for clk_gen. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1665.246 ; gain = 644.160
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1604.566 ; gain = 584.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1665.246 ; gain = 644.160
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1604.566 ; gain = 584.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -118,7 +117,7 @@ DSP Report: operator mult_reg0 is absorbed into DSP mult_reg0.
 DSP Report: Generating DSP Add_result0, operation Mode is: C+(A:0x0):B.
 DSP Report: operator Add_result0 is absorbed into DSP Add_result0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1665.246 ; gain = 644.160
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1604.566 ; gain = 584.762
 ---------------------------------------------------------------------------------
  Sort Area is  mult_reg0_0 : 0 0 : 454 454 : Used 1 time 100
  Sort Area is  Add_result0_2 : 0 0 : 47 47 : Used 1 time 100
@@ -142,19 +141,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1665.246 ; gain = 644.160
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1604.566 ; gain = 584.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1665.246 ; gain = 644.160
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1607.180 ; gain = 587.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1665.246 ; gain = 644.160
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1613.449 ; gain = 593.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -172,37 +171,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1665.246 ; gain = 644.160
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1629.262 ; gain = 609.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1665.246 ; gain = 644.160
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1629.262 ; gain = 609.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1665.246 ; gain = 644.160
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1629.262 ; gain = 609.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1665.246 ; gain = 644.160
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1629.262 ; gain = 609.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1665.246 ; gain = 644.160
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1629.262 ; gain = 609.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1665.246 ; gain = 644.160
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1629.262 ; gain = 609.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -238,18 +237,18 @@ Report Cell Usage:
 |9     |OBUF    |     8|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1665.246 ; gain = 644.160
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1629.262 ; gain = 609.457
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1665.246 ; gain = 548.676
-Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1665.246 ; gain = 644.160
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1629.262 ; gain = 572.645
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1629.262 ; gain = 609.457
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1665.246 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1641.340 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1665.246 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1645.016 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -258,8 +257,298 @@ Synth Design complete | Checksum: 2dbd0b56
 INFO: [Common 17-83] Releasing license: Synthesis
 28 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1665.246 ; gain = 1063.328
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1665.246 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1645.016 ; gain = 1043.984
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1645.016 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.runs/synth_1/blender2.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file blender2_utilization_synth.rpt -pb blender2_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Oct 10 21:24:09 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 10 22:48:21 2025...
+
+*** Running vivado
+    with args -log blender3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source blender3.tcl
+
+
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source blender3.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/utils_1/imports/synth_1/blender.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/utils_1/imports/synth_1/blender.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top blender3 -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 30548
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1460.688 ; gain = 439.574
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'blender3' [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sources_1/new/blender3.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.runs/synth_1/.Xil/Vivado-47040-DESKTOP-6LGOCJL/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.runs/synth_1/.Xil/Vivado-47040-DESKTOP-6LGOCJL/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'domain1_mod' [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sources_1/new/domain1_mod.v:23]
+INFO: [Synth 8-6157] synthesizing module 'c_shift_ram_0' [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.runs/synth_1/.Xil/Vivado-47040-DESKTOP-6LGOCJL/realtime/c_shift_ram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_shift_ram_0' (0#1) [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.runs/synth_1/.Xil/Vivado-47040-DESKTOP-6LGOCJL/realtime/c_shift_ram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'domain1_mod' (0#1) [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sources_1/new/domain1_mod.v:23]
+INFO: [Synth 8-6157] synthesizing module 'domain2' [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sources_1/new/domain2.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'domain2' (0#1) [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sources_1/new/domain2.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'blender3' (0#1) [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sources_1/new/blender3.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1568.488 ; gain = 547.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1568.488 ; gain = 547.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1568.488 ; gain = 547.375
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1568.488 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.gen/sources_1/ip/c_shift_ram_0/c_shift_ram_0/c_shift_ram_1_in_context.xdc] for cell 'dut/shift_gen'
+Finished Parsing XDC File [c:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.gen/sources_1/ip/c_shift_ram_0/c_shift_ram_0/c_shift_ram_1_in_context.xdc] for cell 'dut/shift_gen'
+Parsing XDC File [c:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_gen'
+Finished Parsing XDC File [c:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_gen'
+Parsing XDC File [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1660.684 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+The system cannot find the path specified.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1660.684 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1660.684 ; gain = 639.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1660.684 ; gain = 639.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property KEEP_HIERARCHY = SOFT for dut/shift_gen. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for clk_gen. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1660.684 ; gain = 639.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/utils_1/imports/synth_1/blender.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1660.684 ; gain = 639.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1660.684 ; gain = 639.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1660.684 ; gain = 639.570
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 4     
+	                8 Bit    Registers := 5     
++---Muxes : 
+	   2 Input    8 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP mult_reg0, operation Mode is: A*B.
+DSP Report: operator mult_reg0 is absorbed into DSP mult_reg0.
+DSP Report: Generating DSP Add_result0, operation Mode is: C+(A:0x0):B.
+DSP Report: operator Add_result0 is absorbed into DSP Add_result0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1660.684 ; gain = 639.570
+---------------------------------------------------------------------------------
+ Sort Area is  mult_reg0_0 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  Add_result0_2 : 0 0 : 47 47 : Used 1 time 100
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|domain2     | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|domain2     | C+(A:0x0):B | 30     | 16     | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1660.684 ; gain = 639.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1660.684 ; gain = 639.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1660.684 ; gain = 639.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1660.684 ; gain = 639.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1660.684 ; gain = 639.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1660.684 ; gain = 639.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1660.684 ; gain = 639.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1660.684 ; gain = 639.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1660.684 ; gain = 639.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|domain2     | (A*B)'      | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|domain2     | (C+A:B)'    | 0      | 16     | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
+|2     |c_shift_ram_0 |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |c_shift_ram |     1|
+|2     |clk_wiz     |     1|
+|3     |DSP48E1     |     2|
+|5     |LUT1        |     2|
+|6     |LUT2        |    24|
+|7     |LUT3        |    16|
+|8     |FDCE        |    73|
+|9     |IBUF        |    34|
+|10    |OBUF        |     8|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1660.684 ; gain = 639.570
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1660.684 ; gain = 547.375
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1660.684 ; gain = 639.570
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1660.684 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1660.684 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+The system cannot find the path specified.
+Synth Design complete | Checksum: 58399c56
+INFO: [Common 17-83] Releasing license: Synthesis
+27 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1660.684 ; gain = 1059.449
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1660.684 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.runs/synth_1/blender3.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file blender3_utilization_synth.rpt -pb blender3_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 10 22:54:11 2025...

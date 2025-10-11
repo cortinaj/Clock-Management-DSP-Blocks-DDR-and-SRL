@@ -57,7 +57,6 @@
 c_shift_ram_0 your_instance_name (
   .D(D),      // input wire [7 : 0] D
   .CLK(CLK),  // input wire CLK
-  .CE(CE),    // input wire CE
   .Q(Q)      // output wire [7 : 0] Q
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------

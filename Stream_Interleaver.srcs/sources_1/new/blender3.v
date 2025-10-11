@@ -41,7 +41,7 @@ module blender3(
     );
     
     
-    domain1 dut (.clk(clk_out1),
+    domain1_mod dut (.clk(clk_out1),
                  .rst(rst),
                  .sel(sel),
                  .inp1(P0),
