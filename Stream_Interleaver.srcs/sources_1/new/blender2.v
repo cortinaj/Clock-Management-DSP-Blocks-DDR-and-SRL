@@ -31,12 +31,12 @@ module blender2(
 
     wire clk_out1, clk_out2;
     wire [7:0] P_value, A_value;
-    wire [7:0] Add_result;
+    wire [15:0] Add_result;
 
     clk_wiz_0 clk_gen (
         .clk_out1(clk_out1),
         .clk_out2(clk_out2),
-        .reset(rst),
+        .reset(~rst),
         .clk_in1(clk)
     );
     
@@ -63,7 +63,7 @@ module blender2(
         if(!rst) begin
             Pf <= 8'b0;
         end else begin
-            Pf <= Add_result;
+            Pf <= Add_result[15:8];
         end
     end
                

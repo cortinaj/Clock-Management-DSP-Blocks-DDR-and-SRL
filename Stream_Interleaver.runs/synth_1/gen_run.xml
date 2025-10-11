@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1760074536" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/blender.dcp">
-  <File Type="PA-TCL" Name="Mux_2to1.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="Mux_2to1_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="Mux_2to1_reports.tcl"/>
-  <File Type="RDS-RDS" Name="Mux_2to1.vds"/>
-  <File Type="RDS-UTIL" Name="Mux_2to1_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="Mux_2to1_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="Mux_2to1.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Mux_2to1_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="Mux_2to1_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1760156614" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/blender.dcp">
+  <File Type="PA-TCL" Name="blender2.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="blender2_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="blender2_reports.tcl"/>
+  <File Type="RDS-RDS" Name="blender2.vds"/>
+  <File Type="RDS-UTIL" Name="blender2_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="blender2_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="blender2.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="blender2_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="blender2_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/Mux_2to1.v">
+    <File Path="$PSRCDIR/sources_1/new/domain1.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/blender2_test.v">
+    <File Path="$PSRCDIR/sources_1/new/domain2.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -28,37 +27,12 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/blender2.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/blender.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/Clk2_domain.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/ip/c_shift_ram_0/c_shift_ram_0.xci">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/blender3.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -74,9 +48,41 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/Clk2_domain.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/blender.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/blender2_test.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/blender3.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Mux_2to1"/>
+      <Option Name="TopModule" Val="blender2"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -103,4 +109,5 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
 </GenRun>

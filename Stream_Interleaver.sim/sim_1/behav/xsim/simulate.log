@@ -1,25 +1,2 @@
 Time resolution is 1 ps
-Starting 3-cycle blend tests...
-
-=== Testing Alpha = 0 (P0=220, P1=100) ===
-[140000 ns] Cycle 1: P_sel=1 A_sel=1 Add_sel=1 => Pf=0
-[180000 ns] Cycle 2: P_sel=0 A_sel=0 Add_sel=0 => Pf=0
-[220000 ns] Cycle 3: Final Pf=0
-
-=== Testing Alpha = 85 (P0=220, P1=100) ===
-[260000 ns] Cycle 1: P_sel=1 A_sel=1 Add_sel=1 => Pf=0
-[300000 ns] Cycle 2: P_sel=0 A_sel=0 Add_sel=0 => Pf=0
-[340000 ns] Cycle 3: Final Pf=0
-
-=== Testing Alpha = 170 (P0=220, P1=100) ===
-[380000 ns] Cycle 1: P_sel=1 A_sel=1 Add_sel=1 => Pf=0
-[420000 ns] Cycle 2: P_sel=0 A_sel=0 Add_sel=0 => Pf=0
-[460000 ns] Cycle 3: Final Pf=0
-
-=== Testing Alpha = 255 (P0=220, P1=100) ===
-[500000 ns] Cycle 1: P_sel=1 A_sel=1 Add_sel=1 => Pf=0
-[540000 ns] Cycle 2: P_sel=0 A_sel=0 Add_sel=0 => Pf=0
-[580000 ns] Cycle 3: Final Pf=0
-
-All alpha tests complete.
-$finish called at time : 680 ns : File "C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sim_1/new/blender2_test_tb.v" Line 108
+$finish called at time : 50100 ns : File "C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sim_1/new/blender2_tb.v" Line 160

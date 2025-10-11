@@ -26,8 +26,8 @@ module domain1(
     input [7:0] inp2, //P1
     input [7:0] inp3, // alpha
     input [7:0] inp4, //1 - alpha
-    output wire [7:0] P_value, //Either has P0 or P1
-    output wire [7:0] A_value //Either has Alpha or one minus alpha
+    output reg [7:0] P_value, //Either has P0 or P1
+    output reg [7:0] A_value //Either has Alpha or one minus alpha
     );
     
     reg [7:0] P0_reg, P1_reg, A_reg, A_minus_reg;
@@ -45,8 +45,10 @@ module domain1(
         end
     end
     
-    assign P_value = sel ? P0_reg : P1_reg; //T = P0_reg, F = P1_reg
-    assign A_value = sel ? A_reg : A_minus_reg; //T = A_reg, F = A_minus_reg
+    always @(*) begin
+        P_value = sel ? P0_reg : P1_reg; //T = P0_reg, F = P1_reg
+        A_value = sel ? A_reg : A_minus_reg; //T = A_reg, F = A_minus_reg
+    end
     
     
 endmodule

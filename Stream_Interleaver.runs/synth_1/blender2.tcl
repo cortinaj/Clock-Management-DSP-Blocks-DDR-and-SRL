@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.runs/synth_1/Mux_2to1.tcl"
+  variable script "C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.runs/synth_1/blender2.tcl"
   variable category "vivado_synth"
 }
 
@@ -76,8 +76,10 @@ create_project -in_memory -part xc7z020clg484-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
+set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.cache/wt [current_project]
 set_property parent.project_path C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.xpr [current_project]
+set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part_repo_paths {C:/Users/JP/AppData/Roaming/Xilinx/Vivado/2023.2/xhub/board_store/xilinx_board_store} [current_project]
@@ -86,7 +88,16 @@ set_property ip_output_repo c:/Users/JP/Documents/School/ECE524/Stream_Interleav
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sources_1/new/Mux_2to1.v
+read_verilog -library xil_defaultlib {
+  C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sources_1/new/domain1.v
+  C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sources_1/new/domain2.v
+  C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sources_1/new/blender2.v
+}
+read_ip -quiet C:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/JP/Documents/School/ECE524/Stream_Interleaver/Clock-Management-DSP-Blocks-DDR-and-SRL/Stream_Interleaver.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -102,7 +113,7 @@ read_checkpoint -auto_incremental -incremental C:/Users/JP/Documents/School/ECE5
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top Mux_2to1 -part xc7z020clg484-1
+synth_design -top blender2 -part xc7z020clg484-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -112,10 +123,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef Mux_2to1.dcp
+write_checkpoint -force -noxdef blender2.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file Mux_2to1_utilization_synth.rpt -pb Mux_2to1_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file blender2_utilization_synth.rpt -pb blender2_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

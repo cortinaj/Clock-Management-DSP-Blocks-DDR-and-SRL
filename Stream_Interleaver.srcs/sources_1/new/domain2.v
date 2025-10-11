@@ -24,32 +24,30 @@ module domain2(
     input clk, rst, sel,
     input [7:0] P_value,
     input [7:0] A_value,
-    output wire [7:0] Add_result
+    output reg [15:0] Add_result
     );
-    
-    reg [7:0] P_reg, A_reg;
-    reg [15:0] Mult_reg, Add_reg;
-    wire [7:0] mux_value;
-    
+
+  reg [15:0] mult_reg;
+    reg [15:0] term_P0, term_P1;
+
     always @(posedge clk or negedge rst) begin
-        if(!rst) begin
-            P_reg <= 8'b0;
-            A_reg <= 8'b0;
-            Mult_reg <= 8'b0;
-            Add_reg <= 8'b0;
+        if (!rst) begin
+            mult_reg   <= 16'd0;
+            term_P0    <= 16'd0;
+            term_P1    <= 16'd0;
+            Add_result <= 16'd0;
         end else begin
-            P_reg <= P_value;
-            A_reg <= A_value;
-            Mult_reg <= P_reg * A_reg;
-            Add_reg <= Mult_reg + mux_value;
+            // Perform the current multiply
+            mult_reg <= P_value * A_value;
+
+            // Store result based on sel
+            if (sel)
+                term_P0 <= mult_reg;   // store P0 * ?
+            else
+                term_P1 <= mult_reg;   // store P1 * (1-?)
+
+            // Once both halves are available, sum them
+            Add_result <= term_P0 + term_P1;
         end
     end
-    
-    assign Add_result = Add_reg;
-    assign mux_value = sel ? 8'd0 : Add_result;
-    
-     
-   
-   
-    
 endmodule

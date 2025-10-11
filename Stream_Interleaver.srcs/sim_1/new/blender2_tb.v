@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns /1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -20,27 +20,88 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
+//module blender2_tb();
+//   reg clk;
+//    reg rst;
+//    reg sel;
+//    reg [7:0] P0, P1, alpha, one_minus_alpha;
+//    wire [7:0] Pf;
+
+//    // Instantiate the DUT
+//    blender2 dut (
+//        .clk(clk),
+//        .rst(rst),
+//        .sel(sel),
+//        .P0(P0),
+//        .P1(P1),
+//        .alpha(alpha),
+//        .one_minus_alpha(one_minus_alpha),
+//        .Pf(Pf)
+//    );
+
+//    // Clock generation: 100 MHz
+//    initial clk = 0;
+//    always #5 clk = ~clk;
+
+//    // Parameters for sine generation
+//    real pi = 3.14159265359;
+//    integer i;
+//    real sine_val;
+
+//    initial begin
+//        // Initialize
+//        rst = 1'b0;
+//        sel = 1'b0;
+//        P0 = 8'd0;
+//        P1 = 8'd0;
+//        alpha = 8'd128;           // 0.5 in Q8
+//        one_minus_alpha = 8'd127; // 1-alpha
+//        #20;
+
+//        // Release reset
+//        rst = 1'b1;
+//        #20;
+
+//        // Generate sinusoidal inputs
+//        for (i = 0; i < 256; i = i + 1) begin
+//            // P0: sine from 0 to 255
+//            sine_val = 127.5 + 127.5 * $sin(2.0 * pi * i / 64); // 64-sample period
+//            P0 = $rtoi(sine_val);
+
+//            // P1: sine with phase shift
+//            sine_val = 127.5 + 127.5 * $sin(2.0 * pi * i / 64 + pi/2);
+//            P1 = $rtoi(sine_val);
+
+//            // Blend factor
+//            alpha = 8'd128;           // 0.5
+//            one_minus_alpha = 8'd127; // 1-alpha
+
+//            // Alternate sel every 32 cycles
+//            if (i % 32 == 0)
+//                sel = ~sel;
+
+//            #10; // 1 clock cycle (10ns)
+//        end
+
+//        $stop;
+//    end
+
+//    // Monitor outputs
+//    initial begin
+//        $monitor("Time=%0t | sel=%b | P0=%d | P1=%d | alpha=%d | one_minus_alpha=%d | Pf=%d",
+//                 $time, sel, P0, P1, alpha, one_minus_alpha, Pf);
+//    end
 module blender2_tb();
-// Testbench signals
-    reg clk_in1;
-    reg rst;
-    reg sel, sel2, mux_sel;
+
+    reg clk_in, rst, sel;
     reg [7:0] P0_tb, P1_tb, alpha_tb, one_minus_alpha_tb;
     wire [7:0] Pf_tb;
 
-    // Clock generation
-    initial begin
-        clk_in1 = 0;
-        forever #5 clk_in1 = ~clk_in1;  // 100 MHz clock
-    end
-
-    // Instantiate DUT (blender2)
+    // Instantiate DUT
     blender2 dut (
-        .clk_in1(clk_in1),
+        .clk(clk_in),
         .rst(rst),
         .sel(sel),
-        .sel2(sel2),
-        .mux_sel(mux_sel),
         .P0(P0_tb),
         .P1(P1_tb),
         .alpha(alpha_tb),
@@ -48,58 +109,55 @@ module blender2_tb();
         .Pf(Pf_tb)
     );
 
-    // Test parameters
-    real t;
-    real freq = 10e6;
-    real clk_period = 10e-9;
+   // 50 MHz clock
+    initial clk_in = 0;
+    always #10 clk_in = ~clk_in; // 20ns period
+
+    // Parameters for sine generation
+    integer count = 0;
+    integer N = 64;  // samples per sine period
     real amplitude0 = 100.0;
     real amplitude1 = 80.0;
-    integer n;
+    real pi = 3.141592653589793;
 
-    initial begin
-        // Initialize
-        rst = 1;
-        sel = 0;
-        sel2 = 0;
-        mux_sel = 1;
-        P0_tb = 0;
-        P1_tb = 0;
-        alpha_tb = 0;
-        one_minus_alpha_tb = 0;
-        #20;
-        rst = 0;
+    integer sample_div = 8;     // control how often sine updates
+    integer sample_count = 0;
 
-        $display("time(ns)\talpha\tP0\tP1\tPf");
+    // Stable sine generators (update every few cycles)
+    always @(posedge clk_in) begin
+        if (!rst) begin
+            P0_tb <= 8'd0;
+            P1_tb <= 8'd0;
+            count <= 0;
+            sample_count <= 0;
+        end else begin
+            if (sample_count == sample_div) begin
+                // Generate next sine values
+                P0_tb <= 128 + $rtoi(amplitude0 * $sin(2 * pi * count / N));
+                P1_tb <= 128 + $rtoi(amplitude1 * $sin(2 * pi * count / N + pi/2));
+                count <= count + 1;
+                sample_count <= 0;
 
-        // Endpoint test 1: alpha = 0 (should output P1)
-        alpha_tb = 0;
-        one_minus_alpha_tb = 255 - alpha_tb;
-        P0_tb = 200; P1_tb = 123;
-        #20;
-        $display("Endpoint test alpha=0: Pf=%0d (expected ~P1=%0d)", Pf_tb, P1_tb);
-
-        // Endpoint test 2: alpha = 255 (should output P0)
-        alpha_tb = 255;
-        one_minus_alpha_tb = 255 - alpha_tb;
-        P0_tb = 200; P1_tb = 123;
-        #20;
-        $display("Endpoint test alpha=255: Pf=%0d (expected ~P0=%0d)", Pf_tb, P0_tb);
-
-        // Alpha sweep test
-        for (alpha_tb = 0; alpha_tb <= 255; alpha_tb = alpha_tb + 51) begin
-            one_minus_alpha_tb = 255 - alpha_tb;
-            $display("=== Alpha = %0d ===", alpha_tb);
-
-            // Generate waveforms
-            for (n = 0; n < 20; n = n + 1) begin
-                t = n * clk_period;
-                P0_tb = 128 + $rtoi(amplitude0 * $sin(2*3.14159*freq*t));
-                P1_tb = 128 + $rtoi(amplitude1 * $sin(2*3.14159*freq*t + 1.0));
-                #10;
-                $display("%0t\t%0d\t%0d\t%0d\t%0d", $time, alpha_tb, P0_tb, P1_tb, Pf_tb);
+                // Toggle sel every full sine period (for clarity)
+                if (count % N == 0)
+                    sel <= ~sel;
+            end else begin
+                sample_count <= sample_count + 1;
             end
         end
+    end
 
+    // Stimulus control
+    initial begin
+        rst = 0;
+        sel = 1;
+        alpha_tb = 8'd64;          // 0.5
+        one_minus_alpha_tb = 8'd191; // 1 - alpha
+        #100; rst = 1;              // Release reset
+
+        // Run long enough to see multiple blend transitions
+        #50000;
         $finish;
     end
+
 endmodule

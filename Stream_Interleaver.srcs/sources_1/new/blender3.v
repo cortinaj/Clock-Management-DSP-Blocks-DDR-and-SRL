@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 10/07/2025 11:55:15 PM
+// Create Date: 10/05/2025 07:29:50 PM
 // Design Name: 
-// Module Name: blender3
+// Module Name: blender2
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -21,62 +21,51 @@
 
 
 module blender3(
-    input clk_in1,
+    input clk,
     input rst,
-    input sel, sel2,mux_sel,
+    input sel,
     input [7:0] P0, P1, alpha, one_minus_alpha,
-    output [7:0] Pf,
-    output locked
+    output reg [7:0] Pf
     );
-     //clock Signals
-   wire clk_out1, clk_out2;
-   
-   //Wires between Clk1 domain and Clk2 domain
-   wire [7:0] P_sync, Alpha_sync;
-   
-   //Output of clk2 domain
-   wire [7:0] Stream_output;
-   
-   //Register to store for Pf
-   reg [7:0] Pf_reg;
-   
-   clk_wiz_0 inst(.clk_out1(clk_out1),
-                          .clk_out2(clk_out2),               
-                          .reset(rst), 
-                          .locked(locked),
-                          .clk_in1(clk_in1)
-                         );
-                         
-    Clk1_Mod domain1(.clk(clk_out1),
+
+
+    wire clk_out1, clk_out2;
+    wire [7:0] P_value, A_value;
+    wire [15:0] Add_result;
+
+    clk_wiz_0 clk_gen (
+        .clk_out1(clk_out1),
+        .clk_out2(clk_out2),
+        .reset(~rst),
+        .clk_in1(clk)
+    );
+    
+    
+    domain1 dut (.clk(clk_out1),
                  .rst(rst),
-                 .locked(locked),
+                 .sel(sel),
                  .inp1(P0),
                  .inp2(P1),
                  .inp3(alpha),
                  .inp4(one_minus_alpha),
-                 .sel(sel),
-                 .sel2(sel2),
-                 .out1(P_sync),
-                 .out2(Alpha_sync)
-                );
-                
-    Clk2_domain domain2(.clk(clk_out2),
-                        .rst(rst),
-                        .locked(locked),
-                        .mux_sel(mux_sel),
-                        .P_input(P_sync),
-                        .Alpha_input(Alpha_sync),
-                        .Stream_output(Stream_output)
-                        );
-    
-    always @(posedge clk_out1 or posedge rst) begin
-        if(rst) begin
-            Pf_reg <= 8'b0;
-        end else if(locked)begin
-            Pf_reg <= Stream_output;
+                 .P_value(P_value),
+                 .A_value(A_value)
+                 );
+                 
+    domain2 dut2 (.clk(clk_out2),
+                  .rst(rst),
+                  .sel(sel),
+                  .P_value(P_value),
+                  .A_value(A_value),
+                  .Add_result(Add_result)
+                 );
+                 
+    always@(posedge clk_out1 or negedge rst) begin
+        if(!rst) begin
+            Pf <= 8'b0;
+        end else begin
+            Pf <= Add_result[15:8];
         end
     end
-    
-    assign Pf = Pf_reg;
-    
+               
 endmodule
