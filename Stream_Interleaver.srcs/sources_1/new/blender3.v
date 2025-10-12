@@ -64,7 +64,7 @@ module blender3(
         if(!rst) begin
             Pf <= 8'b0;
         end else begin
-            Pf <= Add_result[15:8];
+            Pf <= (Add_result + 8'd128) >> 8;
         end
     end
                
